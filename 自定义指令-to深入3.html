@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>智能社--http://www.zhinengshe.com</title>
+    <style>
+
+    </style>
+    <script src="angular-1.3.10.js"></script>
+    <script>
+       var app=angular.module('app',[],function ($controllerProvider,$filterProvider,$compileProvider) {
+            $compileProvider.directive('ngImgShow',function () {
+                 return{
+                    restrict : 'EACM',
+                    template :'<div><div ng-transclude></div><img src="https://www.baidu.com/img/bd_logo1.png" width="200"></div>',
+                    replace : true,
+                    transclude:true,
+                    link: function (scope,element,attr) {
+                         element.children().css('border','5px solid red');
+                    }
+                 }
+            });
+         
+       });
+
+    </script>
+</head>
+<body>
+    <div ng-img-show>
+        <h1>aaa</h1>
+        <h2>bba</h2>
+    </div>
+   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

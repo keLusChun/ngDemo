@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='test' >
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="angular-1.3.10.js"></script>
+	<script type="text/javascript">
+		var app=angular.module('test',[]);
+
+		app.controller('myCtrl',function($scope){
+			$scope.a=3;
+			$scope.b=5;
+		});
+
+		console.log(app)
+	</script>
+	<style>
+
+    </style>
+</head>
+<body ng-controller="myCtrl">
+	
+	{{a+b}}
+</body>
+</html>

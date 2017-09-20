@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="angular-1.3.10.js"></script>
+	<script type="text/javascript">
+		 var app=angular.module('app',[]);
+
+
+        app.controller('mCt',function($scope,$http){
+            $scope.a=10;
+            $scope.b=5;
+
+            $scope.$watch('a+b',function(){
+                //alert('变化了');
+                $scope.sum=$scope.a+$scope.b;
+            });
+
+            /*$scope.$apply(function(){
+                $scope.sum=$scope.a+$scope.b;
+            });*/
+        });
+	</script>
+	<style>
+
+    </style>
+</head>
+<body ng-controller="mCt">
+	<input type="number" ng-model="a" />
+	<input type="number" ng-model="b" />
+	{{sum}}
+</body>
+</html>
