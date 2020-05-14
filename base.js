@@ -41,7 +41,7 @@ export function postAxios(url, params) {
       }
       resolve(res.data.data)
     }).catch(err => {
-      console.error(err.message,22222)
+      console.error(err.message,22222,33333)
       this.$toast(err.message)
     })
   })
